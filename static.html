@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            font-family:'Montserrat';
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        #main{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(155, 90, 138, 0.979);
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            justify-items: center;
+        }
+        #maintxt{
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            position: absolute;
+            z-index: 999;
+        }
+        #maintxt h1{
+            color: rgb(50, 50, 100);
+            margin-left: 15%;
+            line-height: 5px;
+            letter-spacing: 3px;
+            font-weight: 700;
+            font-size: 100px;
+            user-select: none;
+        }
+        #maintxt h6{
+            color: rgb(49, 49, 235);
+            margin-left: 15%;
+            margin-top: 5%;
+            margin-right: 15%;
+            letter-spacing: 3px;
+            font-weight: 400;
+            font-size: 30px;
+            user-select: none;
+        }
+        #left{
+            width: 45%;
+            height: 100%;
+            background-color: inherit;
+            position:relative;
+            overflow: hidden;
+        }
+        #scroll{
+            left: 5%;
+            bottom: -2%;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            transform-origin:0% 50% ;
+            transform: rotate(-90deg);
+        }
+        #scroll #line {
+           width: 200px;
+           height: 3px;
+           background-color: aliceblue;
+        }
+        #scroll h6{
+            color: aliceblue;
+            letter-spacing: 3px;
+            font-size: 12px;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+        #lftnav{
+            width: 100%;
+            display: flex;
+            margin: 1% ;
+            padding: 4%;
+            justify-content: space-between;
+        }
+        #lftnav h3{
+            margin-top: 2%;
+        }
+        
+        #leftcenter{
+            width: 45%;
+            height: 50%;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            background-image: url(https://plus.unsplash.com/premium_photo-1682095661711-f5d67d0e75a9?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            background-position:center ;
+            background-size: cover;
+        }
+        #leftcntrtxt{
+            width: 100%;
+            display: flex;
+            position: absolute;
+            top: 115%;
+        }
+        #leftcntrtxt h1{
+            color: aliceblue;
+            font-size:20px ;
+            letter-spacing:1.5px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        #leftcntrtxt p{
+            margin-left: 15px;
+            width: 75%;
+            color: aliceblue;
+            font-size:12px ;
+            opacity: 60%;
+            letter-spacing:1px;
+            font-weight: 200;
+        }
+        #center{
+            width: 45%;
+            height: 100%;
+            background-image: url(https://plus.unsplash.com/premium_photo-1682095667341-349d44c12bad?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+        #card{
+            top: 70%;
+            right: -15%;
+            width: 170px;
+            height: 170px;
+            position: absolute;
+            display: flex;
+        }
+        #crdicon{
+            background-color: rgb(153, 156, 158);
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content:space-around;
+        }
+        #crdtext{
+           width: 80%;
+           background-image: url(https://plus.unsplash.com/premium_photo-1682095664848-014a0a2bfd8a?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+           padding: 15px;
+           background-position: center;
+           background-size: cover;
+        }
+        #right{
+            width: 10%;
+            height: 100%;
+            background-color: inherit;
+            overflow: hidden;
+            padding-top: 30px;
+            padding-left: 50px;
+        }
+        #right i{
+            margin-left: -12px;
+            position: absolute;
+            font-size: 30px;
+            z-index: 999;
+        }
+        #contact{
+            display: flex;
+            justify-content: space-between;
+            transform-origin:0% 50% ;
+            transform: rotate(90deg);
+        }
+        #contact a{
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: 1.5px;
+            color: red;
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="maintxt">
+            <h1>The Great Escape.</h1>
+            <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, maioresLorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, maiores.</h6>
+        </div>
+        <div id="left">
+            <div id="scroll">
+                <div id="line"></div>
+                <h6>scroll down</h6>
+            </div>
+            <div id="lftnav">
+                <h1>lorem</h1>
+                <h3>lorem</h3>
+                <h3>lorem</h3>
+            </div>
+            <div id="leftcenter">
+                <div id="leftcntrtxt">
+                    <div>
+                        <h1>lorem</h1>
+                        <h1>lorem</h1>
+                    </div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius quo molestias voluptate minima! Accusamus iste dolore expedita animi exercitationem itaque!</p>
+                </div>
+            </div>
+        </div>
+        <div id="center">
+            <div id="card">
+                <div id="crdicon">
+                    <i class="ri-arrow-up-s-line"></i>
+                    <i class="ri-arrow-down-s-line"></i>
+                </div>
+                <div id="crdtext"></div>
+            </div>
+        </div>
+        <div id="right">
+            <i class="ri-search-line"></i>
+            <div id="contact">
+                <a href="#">facebook</a>
+                <a href="#">twitter</a>
+                <a href="#">instagram</a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
